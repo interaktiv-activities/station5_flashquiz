@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STATION 5 - Flash Quiz</title>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+        <script defer src="script.js"></script>
+        <script defer src="animation.js"></script>
+    </head>
+
+    <body>
+        <section class="parallax" id="parallax">
+            <image src="ANIMATION-ELEMENTS/title-img.png" class="title-img layer" data-speed="2"></image><br>
+            <button class="start-button layer" data-speed="2" onclick="startGame()"> START! </button>
+            <img src="ANIMATION-ELEMENTS/asset1.png" data-speed="7" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset2.png" data-speed="12" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset3.png" data-speed="-2" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset4.png" data-speed="-7" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset5.png" data-speed="8" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset6.png" data-speed="5" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset7.png" data-speed="-4" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset8.png" data-speed="-6" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset9.png" data-speed="7" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset10.png" data-speed="-5" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset11.png" data-speed="1" class="layer card" id="card">
+            <img src="ANIMATION-ELEMENTS/asset12.png" data-speed="-5" class="layer card" id="card">
+        </section>
+
+        <div class="container">
+            <input type="image" class="pass-msg msg hide" id="pass-msg" src="ASSETS/pass-msg.png">
+            <input type="image" class="fail-msg msg hide" id="fail-msg" src="ASSETS/fail-msg.png">
+            <input type="image" class="title hide" id="title" src="ASSETS/station-title.png">
+            <div class=counter>
+                <span id="right-answers" class='hide hide-end'></span>
+            </div>
+            <div id="question-container" class="hide">
+                <div id="score-display" class="score-display">SCORE: 0</div>
+                <div id="questions" class="questions">Question</div>
+                <div id="answer-btn" class="btn-grid">
+                    <button class="answer-btn btn">Answer 1</button>
+                    <button class="answer-btn btn">Answer 2</button>
+                    <button class="answer-btn btn">Answer 3</button>
+                    <button class="answer-btn btn">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="start-scrn">
+                    <input type="image" src="ASSETS/start-btn.png" class="start-btn ctr-btn hide" id="restart-btn" onclick="startGame()">
+                    <input type="image" src="ASSETS/next-btn.png" class="next-btn ctr-btn hide" id="next-btn">
+                    <input type="image" src="ASSETS/menu-btn.png" class="menu-btn ctr-btn hide" id="menu-btn" onclick="window.location.href='https://interaktiv.benilde.edu.ph/?page_id=4171';">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
