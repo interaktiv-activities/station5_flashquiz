@@ -47,7 +47,7 @@ function startGame() {
   title.classList.remove('hide')
   backgroundMusic.play()
   backgroundMusic.loop = true
-  backgroundMusic.volume = 0.1
+  backgroundMusic.volume = 0.05
   setNextQuestion()
 }
 
@@ -90,6 +90,7 @@ function selectAnswer(e) {
   } else {
     if (countRightAnswers >= 7) {
       backgroundMusic.pause()
+      winSound.volume = .1
       winSound.play()
       passMessage.classList.remove('hide')
       menuButton.classList.remove('hide')
@@ -99,6 +100,7 @@ function selectAnswer(e) {
       scoreDisplay.classList.add('hide')
     } else {
       backgroundMusic.pause()
+      gameOverSound.volume = .1
       gameOverSound.play()
       failMessage.classList.remove('hide')
       restartButton.classList.remove('hide')
@@ -111,8 +113,10 @@ function selectAnswer(e) {
   if (selectedButton.dataset = correct) {
     countRightAnswers++
     scoreDisplay.innerHTML = "SCORE: " + countRightAnswers
+    correctSound.volume = .1
     correctSound.play()
   } else {
+    wrongSound.volume = .1
     wrongSound.play()
   }
 }
